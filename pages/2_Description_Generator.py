@@ -13,7 +13,7 @@ hero("📝 Description Generator", "Full descriptions ready to paste.")
 
 game, fmt, topic = generator_inputs("desc")
 st.write("")
-if st.button("✨ Generate Descriptions"):
+if st.button("✨ Generate Descriptions", type="primary"):
     if not topic.strip():
         st.warning("Please type a topic or click one of the ideas above.")
     else:
@@ -26,5 +26,4 @@ if res:
     for i, d in enumerate(res["items"], 1):
         st.subheader(f"Option {i}")
         st.code(d, language=None)
-        copy_button(d)
         save_bar("Description", res["game"], res["fmt"], res["topic"], d, f"save_desc_{i}")

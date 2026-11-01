@@ -13,7 +13,7 @@ hero("✍️ Title Generator", "Catchy, click-worthy YouTube titles in one click
 
 game, fmt, topic = generator_inputs("title")
 st.write("")
-if st.button("✨ Generate Titles"):
+if st.button("✨ Generate Titles", type="primary"):
     if not topic.strip():
         st.warning("Please type a topic or click one of the ideas above.")
     else:
